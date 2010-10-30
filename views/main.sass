@@ -12,7 +12,7 @@ body
 #wrapper
   position: relative
   height: 100%
-  width: 422px 
+  width: 390px 
   margin: 0 auto
   
 #line 
@@ -30,17 +30,14 @@ h1
   letter-spacing: 7.7px
   color: #FFF
   
-
-
-  
 #boxes  
   z-index: 1
   position: absolute
   top: 50%
   left: 50%
   height: 30px
-  margin-top: -15px
-  margin-left: -15px
+  margin-top: -30px
+  margin-left: -30px
   div
     position: absolute
     background: #CC0000
@@ -51,3 +48,12 @@ h1
     cursor: pointer
     opacity: 0
     font-size: 0.9em
+
+// useless??
+#wrapper 
+  -webkit-perspective-origin: 50% 525px
+  -webkit-perspective: 10 // For compatibility with iPhone 3.0, we leave off the units here
+
+#boxes div
+  -webkit-transform: rotateX(0deg) rotateY(0deg)
+  -webkit-transform-style: preserve-3d

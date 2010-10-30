@@ -1,77 +1,83 @@
 (function() {
-  var Box, animate_boxes, animate_name, boxes, included, opacity_max, overlay_check;
+  var Box, anim_boxes, anim_name, animate_boxes, animate_name, boxes, delay_boxes, delay_name, included, one_angle, opacity_max, toRad;
   var __bind = function(func, context) {
     return function(){ return func.apply(context, arguments); };
   };
+  delay_name = 1500;
+  delay_boxes = 3000;
+  anim_name = 1000;
+  anim_boxes = 1000;
+  delay_name = 500;
+  delay_boxes = 2000;
+  anim_name = 1000;
+  anim_boxes = 1000;
   animate_name = function() {
     return $("#line").animate({
-      width: "422px"
-    }, 1000, function() {
+      width: "390px"
+    }, anim_name, function() {
       return $("#boxes").show();
     });
   };
   included = __bind(function(x, y, box) {
     return ((x >= box.x) && (x + box.size <= box.x)) && ((y >= box.y) && (y + box.size <= box.y));
   }, this);
+  toRad = function(deg) {
+    return deg * Math.PI / 180;
+  };
   boxes = [];
   opacity_max = 0.6;
-  Box = function() {
+  one_angle = function(idx) {
+    return 360 / $("#boxes div").size() * (idx);
+  };
+  Box = function(elem, idx) {
     var variation_x, variation_y;
     variation_x = 920;
     variation_y = 500;
-    this.x = (Math.random() - 0.5) * variation_x;
-    this.y = (Math.random() - 0.5) * variation_y;
+    this.angle = one_angle(idx);
+    this.radius = 200;
+    this.x = Math.sin(this.angle) * this.radius;
+    this.y = Math.cos(this.angle) * this.radius;
+    console.log("angle: " + this.angle + " x:" + this.x + " y:" + this.y);
+    this.elem = elem;
+    this.idx = idx;
+    this.width = 100;
+    this.height = 100;
+    if (this.idx === 0) {
+      this.width = 60;
+    }
     return this;
   };
   Box.prototype.size = 130;
-  Box.prototype.overlaying = function() {
-    var _ref, i;
-    _ref = boxes.length;
-    for (i = 0; (0 <= _ref ? i < _ref : i > _ref); (0 <= _ref ? i += 1 : i -= 1)) {
-      if (included(this.x, this.y, boxes[i])) {
-        return true;
-      }
-    }
-    return false;
-  };
-  overlay_check = function(box) {
-    if (boxes.length !== 0 || box.overlaying()) {
-      box = new Box();
-      return overlay_check(box);
-    } else {
-      boxes = boxes + [box];
-      return box;
-    }
+  Box.prototype.animate = function() {
+    var rotX, rotY;
+    $(this.elem).css({
+      zIndex: this.idx + 2
+    });
+    rotX = Math.cos(this.angle) * 45;
+    rotY = Math.sin(this.angle) * 45;
+    console.log("angle: " + this.angle + " rotX:" + rotX + " rotY:" + rotY);
+    $(this.elem).css("-webkit-transition", "-webkit-transform 1s");
+    $(this.elem).css("-webkit-transition-timing-function", "ease-in-out");
+    $(this.elem).css("-webkit-transition-delay", "1s");
+    return $(this.elem).animate({
+      opacity: opacity_max,
+      left: this.x,
+      top: this.y,
+      width: this.width + "px",
+      height: this.height + "px"
+    }, anim_boxes);
   };
   animate_boxes = function() {
     return $.each($("#boxes div"), function(idx, elem) {
-      var box, height, width;
-      box = new Box();
-      if (box.overlaying()) {
-        box = new Box();
-      }
-      boxes = boxes + [box];
-      width = 100;
-      height = 100;
-      if (idx === 0) {
-        width = 60;
-      }
-      $(elem).css({
-        zIndex: idx + 2
-      });
-      return $(elem).animate({
-        opacity: opacity_max,
-        left: box.x,
-        top: box.y,
-        width: width + "px",
-        height: height + "px"
-      }, 1000);
+      var box;
+      box = new Box(elem, idx);
+      return box.animate();
     });
   };
   $(function() {
     var z_index;
-    setTimeout(animate_name, 1500);
-    setTimeout(animate_boxes, 3000);
+    setTimeout(animate_name, delay_name);
+    setTimeout(animate_boxes, delay_boxes);
     $("#boxes div").bind('click', function() {
       return (document.location.href = $(this).attr("data-href"));
     });
