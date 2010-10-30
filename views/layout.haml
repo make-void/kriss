@@ -1,9 +1,9 @@
 %html
   %head
     %title Kristina Butkute's website
-    %link{ rel: "stylesheet", href: "main.css" }
+    %link{ rel: "stylesheet", href: "/main.css" }
     %script{ src: "https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" }
     %script{ src: "/js/master.js" }
-  %body  
+  %body{ class: request.path.split("/")[1] }  
     #content
       = yield
