@@ -7,9 +7,9 @@ set :domain,      "krikri.makevoid.com"
 
 # #set :repository,  "svn://#{domain}/svn/#{application}"
 # #default_run_options[:pty] = true  # Must be set for the password prompt from git to work
-set :repository, "git://github.com/makevoid/#{application}.git"  # public
-# set :repository, "git@github.com:makevoid/krikri.git"  # private via ssh
-# # set :repository, "https://makevoid@github.com/makevoid/krikri.git"  # private with pass
+set :repository, "git://github.com/makevoid/kriss.git"  # public
+# set :repository, "git@github.com:makevoid/kriss.git"  # private via ssh
+# # set :repository, "https://makevoid@github.com/makevoid/kriss.git"  # private with pass
 set :scm, "git"
 set :branch, "master"
 set :deploy_via, :remote_cache
