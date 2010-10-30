@@ -14,3 +14,7 @@ get '/main.css' do
   sass :main
 end
 
+
+get '/pages/*' do |page|
+  haml "pages/#{page}".to_sym
+end

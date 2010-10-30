@@ -15,6 +15,7 @@ included = (x, y, box) =>
   
 #boxes = [{x: -200, y:-100, size: 300}]
 boxes = []
+opacity_max = 0.6
 
 class Box
   size: 130 # px
@@ -26,13 +27,13 @@ class Box
   overlaying: () ->
     #console.log boxes
     for i in [0...boxes.length] 
-      console.log boxes[i].x
+      #console.log boxes[i].x
       return true if included(@x, @y, boxes[i])
     return false
 
 
 overlay_check = (box) ->
-  console.log box.overlaying()
+  #console.log box.overlaying()
   if boxes.length != 0 || box.overlaying()
     box = new Box
     overlay_check(box)
@@ -44,11 +45,11 @@ animate_boxes = () ->
   $.each($("#boxes div"), (idx, elem) ->
     box = new Box
     #boxes = boxes + [box]
-    console.log "over: " + box.overlaying()
+    #console.log "over: " + box.overlaying()
     box = new Box if box.overlaying()
     boxes = boxes + [box]
     #box = overlay_check(box)
-    console.log "over2: " + box.overlaying()
+    #console.log "over2: " + box.overlaying()
     #
       
     #console.log "reallocating box"
@@ -57,8 +58,9 @@ animate_boxes = () ->
     height = 100
     width = 60 if idx == 0 
     
+    $(elem).css({ zIndex: idx+2 })
     $(elem).animate({
-      opacity: 1,
+      opacity: opacity_max,
       left: box.x,
       top: box.y,
       width: width+"px",
@@ -73,14 +75,24 @@ $(() ->
   setTimeout(animate_name, 1500)
   setTimeout(animate_boxes, 3000)
   
+  $("#boxes div").bind('click', ->
+    document.location.href = $(this).attr("data-href")
+  )
+  
+  z_index = 2
   $("#boxes div").hover(
-    () ->
-      $(this).animate({
-        opacity: 0.7
-      }, 300)
-    () ->
+    ->
+      z_index = $(this).css("z-index")
       $(this).animate({
         opacity: 1
-      }, 300);
+      }, 300, ->
+        $(this).css({ zIndex: 10 })
+      )
+    ->
+      $(this).animate({
+        opacity: opacity_max
+      }, 300  , ->
+        $(this).css({ zIndex: z_index })
+      )
   )
 );
