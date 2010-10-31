@@ -73,14 +73,14 @@
     });
   };
   $(function() {
-    var z_index;
+    var options, z_index;
     setTimeout(animate_name, delay_name);
     setTimeout(animate_boxes, delay_boxes);
     $("#boxes div").bind('click', function() {
       return (document.location.href = $(this).attr("data-href"));
     });
     z_index = 2;
-    return $("#boxes div").hover(function() {
+    $("#boxes div").hover(function() {
       z_index = $(this).css("z-index");
       return $(this).animate({
         opacity: 1
@@ -98,5 +98,18 @@
         });
       });
     });
+    $("img.large").click(function() {
+      return (location.href = "/zoom" + $(this).attr('src'));
+    });
+    options = {
+      showEffect: 'show',
+      hideEffect: 'fadeout',
+      fadeoutSpeed: 'slow',
+      zoomWidth: 1000,
+      zoomHeight: 400,
+      position: 'top',
+      title: false
+    };
+    return $(".jqzoom").jqzoom(options);
   });
 }).call(this);

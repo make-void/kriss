@@ -101,4 +101,19 @@ $(->
         $(this).css({ zIndex: z_index })
       )
   )
+  
+  $("img.large").click(->
+    #console.log($(this).attr('src'))
+    location.href = "/zoom"+$(this).attr('src')
+  )
+  
+  options =
+    showEffect:'show',
+    hideEffect:'fadeout',
+    fadeoutSpeed: 'slow',
+    zoomWidth: 1000,
+    zoomHeight: 400,
+    position : 'top',
+    title :false
+  $(".jqzoom").jqzoom(options);
 );

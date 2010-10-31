@@ -1,0 +1,10 @@
+%h2= @name
+
+%a{ href: "/pages/#{@project}" } back
+
+%p hover the mouse on the image to zoom it
+
+%a.jqzoom{ href: @image }
+  %img#small{ src: @image }
+  
+.spacing

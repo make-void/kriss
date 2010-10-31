@@ -1,14 +1,14 @@
 10
 
 dir
-2
+3
 svn://makevoid@makevoid.com/svn/krikri/public/images/master_project
 svn://makevoid@makevoid.com/svn/krikri
 
 
 
-2010-10-30T23:21:46.109284Z
-2
+2010-10-30T23:46:18.618554Z
+3
 krikri
 
 
@@ -230,6 +230,74 @@ has-props
 
 585036
 
+kurshland_vizualization_northview.jpg
+file
+
+
+
+
+2010-10-30T23:43:43.000000Z
+2ab3de7eaf20f6eef62ea21199eb965c
+2010-10-30T23:46:18.618554Z
+3
+krikri
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+233719
+
+kurshland_visualization_westview.jpg
+file
+
+
+
+
+2010-10-30T23:43:43.000000Z
+9ee897daec761c464c74010ab4c817d5
+2010-10-30T23:46:18.618554Z
+3
+krikri
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+288838
+
 kurshland_planu_detalisation.jpg
 file
 
@@ -263,6 +331,40 @@ has-props
 
 
 187479
+
+kurshland_yachtparking_space.jpg
+file
+
+
+
+
+2010-10-30T23:43:43.000000Z
+0a630d3bdf8440f449f38ed317992869
+2010-10-30T23:46:18.618554Z
+3
+krikri
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+237802
 
 kurshland_facade_east_visualization.jpg
 file
