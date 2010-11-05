@@ -28,8 +28,19 @@ toRad = (deg) ->
 boxes = []
 opacity_max = 0.6
 
+# insert_randoms = (num) ->
+#   rand = Math.random()
+#   randoms.each do
+#     if rand > 
+#   insert_randoms num
+# 
+# randoms = []
+# insert_randoms("#boxes div").size());
+
+
 one_angle = (idx) ->
-  360/$("#boxes div").size() * (idx)
+  (6/$("#boxes div").size()+0) * (idx)#*randoms[idx]
+  #(1/2)*idx
 
 class Box
   size: 130 # px
@@ -38,10 +49,10 @@ class Box
     variation_y = 500
     #@angle = Math.random()*360
     @angle = one_angle(idx)
-    @radius = 200
+    @radius = Math.random()*250+50
     @x = Math.sin(@angle)*@radius
-    @y = Math.cos(@angle)*@radius
-    #console.log "angle: "+@angle+" x:"+@x+" y:"+@y
+    @y = -Math.cos(@angle)*@radius
+    console.log "angle: "+@angle+" x:"+@x+" y:"+@y
     @elem = elem
     @idx = idx
     @width = 100
@@ -50,8 +61,8 @@ class Box
   animate: -> 
     $(@elem).css({ zIndex: @idx+2 })
     
-    rotX = Math.cos(@angle)*45
-    rotY = Math.sin(@angle)*45
+    rotX = Math.cos(@angle)*45 
+    rotY = Math.sin(@angle)*45 
     #rotX = -45
     #deg = if @angle > 180 then @angle/2 else @angle
     #randY = if deg <= 90 then -deg/2 else deg*2-45

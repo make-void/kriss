@@ -1,14 +1,14 @@
 10
 
 dir
-3
+11
 svn://makevoid@makevoid.com/svn/krikri/public/images/master_project
 svn://makevoid@makevoid.com/svn/krikri
 
 
 
-2010-10-30T23:46:18.618554Z
-3
+2010-11-01T21:55:03.290217Z
+10
 krikri
 
 
@@ -26,14 +26,184 @@ krikri
 
 4c4d274b-9711-4e75-ac5d-514b2c058aec
 
-kurshland_planai_visualization.jpg
+kurshland_view_above.jpg
+file
+
+
+
+
+2010-11-02T15:57:31.000000Z
+37dad571e93deeb51fc57e24d8984607
+2010-10-31T13:27:59.391853Z
+9
+krikri
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+577023
+
+kurshland_visualization_west_view.jpg
+file
+
+
+
+
+2010-11-02T15:57:31.000000Z
+9ee897daec761c464c74010ab4c817d5
+2010-11-01T21:55:03.290217Z
+10
+krikri
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+288838
+
+kurshland_yacht_parking_space.jpg
+file
+
+
+
+
+2010-11-02T15:57:31.000000Z
+9a4762a67449b316be93201a2e39464a
+2010-11-01T21:55:03.290217Z
+10
+krikri
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+438343
+
+kurshland_roof_plan_square.jpg
+file
+
+
+
+
+2010-11-02T15:57:31.000000Z
+c8597c7d0c94729db6d317b9904ceec8
+2010-11-01T21:55:03.290217Z
+10
+krikri
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+312149
+
+kurshland_urban_location.jpg
+file
+
+
+
+
+2010-11-02T15:57:31.000000Z
+7eb125dbe679f118c3240fead063221f
+2010-11-01T21:55:03.290217Z
+10
+krikri
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+380797
+
+kurshland_facade_east_visualization.jpg
 file
 
 
 
 
 2010-10-30T23:20:39.000000Z
-f61477d60e152b077fcb9babf8e7cae2
+73f0a795ab51db913f0161e11ce7a2d6
 2010-10-30T23:21:46.109284Z
 2
 krikri
@@ -58,18 +228,86 @@ has-props
 
 
 
-585036
+233100
 
-kurshland_ideascheme.jpg
+kurshland_visualization_dock.jpg
 file
 
 
 
 
-2010-10-30T23:20:39.000000Z
+2010-11-02T15:57:31.000000Z
+83d15067def470763e2e961951a4da5b
+2010-11-01T21:55:03.290217Z
+10
+krikri
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+265343
+
+kurshland_detalization_interior.jpg
+file
+
+
+
+
+2010-11-02T15:57:31.000000Z
+15e08674fee1cf4b77c00f02d3347e05
+2010-11-01T21:55:03.290217Z
+10
+krikri
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+174729
+
+kurshland_idea.jpg
+file
+
+
+
+
+2010-11-02T15:57:31.000000Z
 fcb604cea414e176010193bfcb1127f7
-2010-10-30T23:21:46.109284Z
-2
+2010-11-01T21:55:03.290217Z
+10
 krikri
 has-props
 
@@ -94,16 +332,16 @@ has-props
 
 66189
 
-kurshland_urbnscheme_section_small.jpg
+kurshland_schema_idea_structure.jpg
 file
 
 
 
 
-2010-10-30T23:20:39.000000Z
-84c20b08f1fce6c5c560e0a61439c69e
-2010-10-30T23:21:46.109284Z
-2
+2010-11-02T15:57:31.000000Z
+339d8b690afa9d1a7d9aec3c03a0d88f
+2010-11-01T21:55:03.290217Z
+10
 krikri
 has-props
 
@@ -126,18 +364,18 @@ has-props
 
 
 
-424523
+93238
 
-kurshland_detalization_interier.jpg
+kurshland_visualization_northview.jpg
 file
 
 
 
 
-2010-10-30T23:20:39.000000Z
-15e08674fee1cf4b77c00f02d3347e05
-2010-10-30T23:21:46.109284Z
-2
+2010-11-02T15:57:31.000000Z
+2ab3de7eaf20f6eef62ea21199eb965c
+2010-11-01T21:55:03.290217Z
+10
 krikri
 has-props
 
@@ -160,7 +398,7 @@ has-props
 
 
 
-174729
+233719
 
 kurshland_location.jpg
 file
@@ -196,16 +434,16 @@ has-props
 
 200099
 
-kurshland_planai_visualization_small.jpg
+kurshland_floor_plans.jpg
 file
 
 
 
 
-2010-10-30T23:20:39.000000Z
-553e0e667511565208eb84005a2230d1
-2010-10-30T23:21:46.109284Z
-2
+2010-11-02T15:57:31.000000Z
+d19a4b277d8f48ef0acde87ee4b33b23
+2010-11-01T21:55:03.290217Z
+10
 krikri
 has-props
 
@@ -228,18 +466,18 @@ has-props
 
 
 
-585036
+740882
 
-kurshland_vizualization_northview.jpg
+kurshland_urban_scheme_section.jpg
 file
 
 
 
 
-2010-10-30T23:43:43.000000Z
-2ab3de7eaf20f6eef62ea21199eb965c
-2010-10-30T23:46:18.618554Z
-3
+2010-11-02T15:57:31.000000Z
+84c20b08f1fce6c5c560e0a61439c69e
+2010-11-01T21:55:03.290217Z
+10
 krikri
 has-props
 
@@ -262,18 +500,18 @@ has-props
 
 
 
-233719
+424523
 
-kurshland_visualization_westview.jpg
+kurshland_project_detalization_restaurant_hotel.jpg
 file
 
 
 
 
-2010-10-30T23:43:43.000000Z
-9ee897daec761c464c74010ab4c817d5
-2010-10-30T23:46:18.618554Z
-3
+2010-11-02T15:57:31.000000Z
+246f6eb21a9509d41abc4d4293993fd9
+2010-11-01T21:55:03.290217Z
+10
 krikri
 has-props
 
@@ -296,18 +534,18 @@ has-props
 
 
 
-288838
+183035
 
-kurshland_planu_detalisation.jpg
+kurshland_visualization_2.jpg
 file
 
 
 
 
-2010-10-30T23:20:39.000000Z
-41712982c6294a4008dc8b1ccf2484e1
-2010-10-30T23:21:46.109284Z
-2
+2010-11-02T15:57:31.000000Z
+83aff3ff56167a094f64c624f2439aad
+2010-11-01T21:55:03.290217Z
+10
 krikri
 has-props
 
@@ -330,18 +568,18 @@ has-props
 
 
 
-187479
+298231
 
-kurshland_yachtparking_space.jpg
+kurshland_visualization3.jpg
 file
 
 
 
 
-2010-10-30T23:43:43.000000Z
-0a630d3bdf8440f449f38ed317992869
-2010-10-30T23:46:18.618554Z
-3
+2010-11-02T15:57:31.000000Z
+cac0ef6a8dd5f32340ad04dda2ad455c
+2010-11-01T21:55:03.290217Z
+10
 krikri
 has-props
 
@@ -364,39 +602,5 @@ has-props
 
 
 
-237802
-
-kurshland_facade_east_visualization.jpg
-file
-
-
-
-
-2010-10-30T23:20:39.000000Z
-73f0a795ab51db913f0161e11ce7a2d6
-2010-10-30T23:21:46.109284Z
-2
-krikri
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-233100
+173590
 

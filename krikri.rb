@@ -10,10 +10,6 @@ get '/' do
   haml :index
 end
 
-get '/main.css' do
-  sass :main
-end
-
 get '/pages/*' do |page|
   regenerate_coffescripts
   haml "pages/#{page}".to_sym
@@ -38,4 +34,9 @@ helpers do
     @name = name
     haml "elements/img_large".to_sym
   end
+end
+
+
+get '/main.css' do
+  sass :main
 end

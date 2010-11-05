@@ -27,16 +27,17 @@
   boxes = [];
   opacity_max = 0.6;
   one_angle = function(idx) {
-    return 360 / $("#boxes div").size() * (idx);
+    return (6 / $("#boxes div").size() + 0) * (idx);
   };
   Box = function(elem, idx) {
     var variation_x, variation_y;
     variation_x = 920;
     variation_y = 500;
     this.angle = one_angle(idx);
-    this.radius = 200;
+    this.radius = Math.random() * 250 + 50;
     this.x = Math.sin(this.angle) * this.radius;
-    this.y = Math.cos(this.angle) * this.radius;
+    this.y = -Math.cos(this.angle) * this.radius;
+    console.log("angle: " + this.angle + " x:" + this.x + " y:" + this.y);
     this.elem = elem;
     this.idx = idx;
     this.width = 100;
