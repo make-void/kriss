@@ -52,7 +52,7 @@ class Box
     @radius = Math.random()*250+50
     @x = Math.sin(@angle)*@radius
     @y = -Math.cos(@angle)*@radius
-    console.log "angle: "+@angle+" x:"+@x+" y:"+@y
+    #console.log "angle: "+@angle+" x:"+@x+" y:"+@y
     @elem = elem
     @idx = idx
     @width = 100

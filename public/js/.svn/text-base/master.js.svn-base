@@ -37,7 +37,6 @@
     this.radius = Math.random() * 250 + 50;
     this.x = Math.sin(this.angle) * this.radius;
     this.y = -Math.cos(this.angle) * this.radius;
-    console.log("angle: " + this.angle + " x:" + this.x + " y:" + this.y);
     this.elem = elem;
     this.idx = idx;
     this.width = 100;
