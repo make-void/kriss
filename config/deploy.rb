@@ -1,31 +1,20 @@
 
 set :application, "krikri"
 
-set :domain,      "krikri.makevoid.com"
+#set :domain,      "krikri.makevoid.com"
+set :domain,      "makevoid.com"
 
 # git
 
 # #set :repository,  "svn://#{domain}/svn/#{application}"
 # #default_run_options[:pty] = true  # Must be set for the password prompt from git to work
 set :repository, "git://github.com/makevoid/kriss.git"  # public
-# set :repository, "git@github.com:makevoid/kriss.git"  # private via ssh
-# # set :repository, "https://makevoid@github.com/makevoid/kriss.git"  # private with pass
+
 set :scm, "git"
 set :branch, "master"
 set :deploy_via, :remote_cache
 
 set :password, File.read("/Users/makevoid/.password").strip.gsub(/33/, '')
-# 
-# set :scm_passphrase, password
-
-
-# svn
-
-# set :repository,  "svn://#{domain}/svn/#{application}"
-# 
-# set :scm_username, "makevoid"
-# set :scm_password, password
-
 
 
 set :user,        "www-data"
@@ -47,10 +36,6 @@ role :db,  domain, :primary => true
 
 after :deploy, "deploy:cleanup"
 #after :deploy, "db:seeds"
-#after :deploy, "symlink:munin"
-#after :deploy, "symlink:object_cache"
-# after :deploy, "chmod:munin"
-# after :deploy, "chmod:object_cache"
 
 namespace :deploy do
   
@@ -147,40 +132,3 @@ namespace :db do
   end
 end
 
-namespace :symlink do
-  
-  desc "create folders in /shared"
-  task :create_folders do
-    run "mkdir -p #{deploy_to}/shared/object_cache"
-    run "mkdir -p #{deploy_to}/shared/munin"
-  end
-  
-  desc "set permissions for munin"
-  task :munin do
-    run "cd #{current_path}/public; ln -s #{deploy_to}/shared/munin munin"
-    #run "/etc/init.d/munin-node restart"
-  end
-  
-  desc "set permissions for object_cache"
-  task :object_cache do
-    run "cd #{current_path}/tmp/cache; ln -s #{deploy_to}/shared/object_cache object_cache"
-  end
-end
-
-namespace :chmod do
-
-  
-  # desc "set permissions for munin"
-  # task :munin do
-  #   
-  #   # set :use_sudo,    true
-  #   #     set :user, "root"
-  #   run "cd #{current_path}; chown -R munin:munin public/munin"
-  #   run "/etc/init.d/munin-node restart"
-  # end
-  
-  # desc "set permissions for object_cache"
-  # task :object_cache do
-  #   run "cd #{current_path}; chown -R www-data:www-data tmp/cache/object_cache"
-  # end
-end
