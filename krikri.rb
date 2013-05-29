@@ -28,7 +28,7 @@ helpers do
   def back
     haml "elements/back".to_sym
   end
-  
+
   def img_large(name)
     @path = request.path.split("/")[1..-1]
     @name = name
@@ -36,7 +36,3 @@ helpers do
   end
 end
 
-
-get '/main.css' do
-  sass :main
-end
