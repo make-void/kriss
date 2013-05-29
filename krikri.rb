@@ -1,4 +1,5 @@
 path = File.expand_path "../", __FILE__
+PATH = path
 require "#{path}/config/env"
 require 'sinatra'
 
@@ -15,7 +16,7 @@ end
 
 get '/zoom*' do |image|
   @image = image
-  @name = File.basename("#{path}/public/#{image}", ".*").gsub(/_/, " ")
+  @name = File.basename("#{PATH}/public/#{image}", ".*").gsub(/_/, " ")
   @project = image.split("/")[2]
   haml :zoom
 end
