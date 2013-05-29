@@ -6,4 +6,5 @@ gem "sinatra"
 group :development do
   gem "guard"
   gem "guard-sass"
+  gem "guard-coffeescript"
 end

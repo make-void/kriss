@@ -1,3 +1,5 @@
+# interesting, but I switched to guard-coffeescirpt
+
 module Moka
   def regenerate_coffescripts
     return if ENV["RACK_ENV"] == "production"
