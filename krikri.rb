@@ -14,10 +14,10 @@ get '/pages/*' do |page|
   haml "pages/#{page}".to_sym
 end
 
-get '/zoom*' do |image|
-  @image = image
+get '/zoom/*' do |image|
   @name = File.basename("#{PATH}/public/#{image}", ".*").gsub(/_/, " ")
-  @project = image.split("/")[2]
+  @image = "/#{image}"
+  @project = image.split("/")[1]
   haml :zoom
 end
 
