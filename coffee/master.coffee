@@ -12,7 +12,7 @@ anim_boxes = 1000
 
 animate_name = ->
   $("#line").animate({
-    width: "390px"
+    width: "420px" # 390 on webkit?
   }, anim_name, ->
     $("#boxes").show();
   )
@@ -47,9 +47,9 @@ class Box
   constructor: (elem, idx) ->
     variation_x = 920
     variation_y = 500
-    #@angle = Math.random()*360
-    @angle = one_angle(idx)
-    @radius = Math.random()*250+50
+    @angle = Math.random()*360
+    #@angle = one_angle(idx)
+    @radius = Math.random()*350+50
     @x = Math.sin(@angle)*@radius
     @y = -Math.cos(@angle)*@radius
     #console.log "angle: "+@angle+" x:"+@x+" y:"+@y

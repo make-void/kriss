@@ -7,4 +7,6 @@ group :development do
   gem "guard"
   gem "guard-sass"
   gem "guard-coffeescript"
+
+  gem "thin"
 end

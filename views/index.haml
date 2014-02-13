@@ -3,10 +3,5 @@
     %h1= "KRISTINA BUTKUTE"
 #boxes_wrap
   #boxes{ style: "display: none" }
-    %div{ :"data-href" => "/pages/me" }                 Me
-    %div{ :"data-href" => "/pages/master_project" }     Master Project
-    %div{ :"data-href" => "/pages/competitions" }        Competitions
-    %div{ :"data-href" => "/pages/renovation" }         Renovation
-    %div{ :"data-href" => "/pages/urban" }              Urban
-    %div{ :"data-href" => "/pages/interior_exterior" }  Interior / Exterior
-    
+    - for dir in dirs
+      %div{ :"data-href" => "/pages/#{dir}" }= dir.capitalize

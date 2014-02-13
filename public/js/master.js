@@ -19,7 +19,7 @@ anim_boxes = 1000;
 
 animate_name = function() {
   return $("#line").animate({
-    width: "390px"
+    width: "420px"
   }, anim_name, function() {
     return $("#boxes").show();
   });
@@ -46,11 +46,10 @@ Box = (function() {
 
   function Box(elem, idx) {
     var variation_x, variation_y;
-
     variation_x = 920;
     variation_y = 500;
-    this.angle = one_angle(idx);
-    this.radius = Math.random() * 250 + 50;
+    this.angle = Math.random() * 360;
+    this.radius = Math.random() * 350 + 50;
     this.x = Math.sin(this.angle) * this.radius;
     this.y = -Math.cos(this.angle) * this.radius;
     this.elem = elem;
@@ -64,7 +63,6 @@ Box = (function() {
 
   Box.prototype.animate = function() {
     var rotX, rotY;
-
     $(this.elem).css({
       zIndex: this.idx + 2
     });
@@ -89,7 +87,6 @@ Box = (function() {
 animate_boxes = function() {
   return $.each($("#boxes div"), function(idx, elem) {
     var box;
-
     box = new Box(elem, idx);
     return box.animate();
   });
@@ -97,7 +94,6 @@ animate_boxes = function() {
 
 $(function() {
   var options, z_index;
-
   setTimeout(animate_name, delay_name);
   setTimeout(animate_boxes, delay_boxes);
   $("#boxes div").bind('click', function() {

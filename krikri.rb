@@ -11,7 +11,9 @@ get '/' do
 end
 
 get '/pages/*' do |page|
-  haml "pages/#{page}".to_sym
+  # haml "pages/#{page}".to_sym
+  @page = page
+  haml :page
 end
 
 get '/zoom/*' do |image|
@@ -23,6 +25,19 @@ end
 
 
 helpers do
+  def dirs_all
+    Dir.glob("#{PATH}/public/images/*").map{ |dir| File.basename dir }
+  end
+
+  def dirs
+    dirs_all - ["_menu"]
+  end
+
+  def photos(dir)
+    files = Dir.glob("#{PATH}/public/images/#{dir}/*.jpg").map{ |dir| File.basename dir, ".jpg" }
+    files.map{ |photo| "/images/#{dir}/#{photo}.jpg" }
+  end
+
   def back
     haml "elements/back".to_sym
   end
