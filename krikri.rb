@@ -35,7 +35,7 @@ helpers do
 
   def photos(dir)
     files = Dir.glob("#{PATH}/public/images/#{dir}/*.jpg").map{ |dir| File.basename dir, ".jpg" }
-    files.map{ |photo| "/images/#{dir}/#{photo}.jpg" }
+    files.map{ |photo| "/images/#{dir}/#{photo}.jpg" }.sort
   end
 
   def back
