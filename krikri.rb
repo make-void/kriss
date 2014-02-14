@@ -3,6 +3,13 @@ PATH = path
 require "#{path}/config/env"
 require 'sinatra'
 
+# monkeypatches
+class String
+  def humanize
+    gsub(/_+/, ' ')
+  end
+end
+
 # require "#{path}/lib/moka"
 # include Moka
 

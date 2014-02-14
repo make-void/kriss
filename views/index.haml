@@ -4,4 +4,4 @@
 #boxes_wrap
   #boxes{ style: "display: none" }
     - for dir in dirs
-      %div{ :"data-href" => "/pages/#{dir}" }= dir.capitalize
+      %div{ :"data-href" => "/pages/#{dir}" }= dir.capitalize.humanize
