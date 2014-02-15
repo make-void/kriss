@@ -4,3 +4,8 @@
 
 - for photo in photos(@page)
   %img.large{ src: photo }
+
+- if @page == "me"
+  .icon
+    open source
+    %img{ src: "/icons/open_source.png" }
