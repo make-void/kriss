@@ -113,6 +113,9 @@ img.large {
   width: 49%;
   display: inline-block; }
 
+img.double {
+  width: 100%; }
+
 a.back {
   margin-bottom: 15px;
   color: black; }

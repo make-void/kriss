@@ -4,7 +4,7 @@
 
 - for photo in photos(@page)
   %a{ href: "/zoom2#{photo}" }
-    %img.large{ src: photo }
+    %img.large{ src: photo, class: "#{"double" if photo[-5] == "_"}" }
 
 - if @page == "me"
   .icon
