@@ -17,6 +17,9 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-  %body{ class: request.path.split("/")[1] }
+  - body_class = request.path.split("/")[1]
+  %body{ class: body_class }
     #content
+      - if body_class
+        %a.right{ href: "/" } HOME
       = yield

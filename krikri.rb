@@ -31,7 +31,7 @@ get '/zoom/*' do |image|
 end
 
 get '/zoom2/*' do |image|
-  @name = File.basename("#{PATH}/public/#{image}", ".*").gsub(/_/, " ")
+  @name = File.basename("#{PATH}/public/#{image}", ".*").split("_")[1..-1].join(" ").gsub(/kristina butkute/, '').strip
   @image = "/#{image}"
   @project = image.split("/")[1]
   haml :zoom2

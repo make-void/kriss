@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box; }
 
+img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
 @font-face {
   font-family: FluxArchitectRegular;
   src: url("/fonts/flux_architect_regular.ttf"); }
@@ -59,11 +65,14 @@ img.large {
   display: block;
   cursor: pointer; }
 
+.right {
+  float: right; }
+
 img#small {
   width: 500px; }
 
 a {
-  color: #7f7af8; }
+  color: grey; }
 
 a:hover {
   color: #423aff; }
@@ -105,4 +114,5 @@ img.large {
   display: inline-block; }
 
 a.back {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  color: black; }

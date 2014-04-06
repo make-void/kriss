@@ -1,6 +1,6 @@
 %h2= @page.capitalize.humanize
 
-= back
+%a.back{ href: "/" } <
 
 - for photo in photos(@page)
   %a{ href: "/zoom2#{photo}" }
