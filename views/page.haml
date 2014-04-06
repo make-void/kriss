@@ -3,7 +3,8 @@
 = back
 
 - for photo in photos(@page)
-  %img.large{ src: photo }
+  %a{ href: "/zoom2#{photo}" }
+    %img.large{ src: photo }
 
 - if @page == "me"
   .icon

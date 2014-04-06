@@ -1,3 +1,9 @@
+=inline
+  display: inline-block
+
+*
+  box-sizing: border-box
+
 @font-face
   font-family: FluxArchitectRegular
   src: url('/fonts/flux_architect_regular.ttf')
@@ -75,7 +81,7 @@ a.back
 .pages #content
   padding: 0 0 60px
 
-.pages, .zoom
+.pages, .zoom, .zoom2
   #content
     margin: 20px 5% 30px 5%
 
@@ -99,3 +105,12 @@ a.back
     width: 30px
     position: relative
     top: 9px
+    
+    
+img.large
+  width: 49%
+  +inline
+  
+  
+a.back
+  margin-bottom: 15px

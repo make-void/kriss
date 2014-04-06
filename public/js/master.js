@@ -118,9 +118,6 @@ $(function() {
       });
     });
   });
-  $("img.large").click(function() {
-    return location.href = "/zoom" + $(this).attr('src');
-  });
   options = {
     showEffect: 'show',
     hideEffect: 'fadeout',

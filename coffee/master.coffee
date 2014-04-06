@@ -113,10 +113,10 @@ $(->
       )
   )
 
-  $("img.large").click(->
-    #console.log($(this).attr('src'))
-    location.href = "/zoom"+$(this).attr('src')
-  )
+  # $("img.large").click(->
+  #   #console.log($(this).attr('src'))
+  #   location.href = "/zoom"+$(this).attr('src')
+  # )
 
   options =
     showEffect:'show',

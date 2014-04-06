@@ -30,6 +30,14 @@ get '/zoom/*' do |image|
   haml :zoom
 end
 
+get '/zoom2/*' do |image|
+  @name = File.basename("#{PATH}/public/#{image}", ".*").gsub(/_/, " ")
+  @image = "/#{image}"
+  @project = image.split("/")[1]
+  haml :zoom2
+end
+
+
 
 helpers do
   def dirs_all
