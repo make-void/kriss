@@ -37,6 +37,8 @@ boxes = [];
 
 opacity_max = 0.6;
 
+boxes = [];
+
 one_angle = function(idx) {
   return (6 / $("#boxes div").size() + 0) * idx;
 };
@@ -48,17 +50,14 @@ Box = (function() {
     var variation_x, variation_y;
     variation_x = 920;
     variation_y = 500;
-    this.angle = Math.random() * 360;
-    this.radius = Math.random() * 350 + 50;
-    this.x = Math.sin(this.angle) * this.radius;
-    this.y = -Math.cos(this.angle) * this.radius;
+    this.angle = idx * Math.PI / 6.0;
+    this.radius = 320;
+    this.x = Math.sin(this.angle) * this.radius * 1.3 - 63;
+    this.y = -Math.cos(this.angle) * this.radius * 0.8 - 46;
     this.elem = elem;
     this.idx = idx;
-    this.width = 100;
-    this.height = 100;
-    if (this.idx === 0) {
-      this.width = 60;
-    }
+    this.width = 200;
+    this.height = 133;
   }
 
   Box.prototype.animate = function() {

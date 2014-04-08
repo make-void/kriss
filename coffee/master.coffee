@@ -37,6 +37,7 @@ opacity_max = 0.6
 # randoms = []
 # insert_randoms("#boxes div").size());
 
+boxes = []
 
 one_angle = (idx) ->
   (6/$("#boxes div").size()+0) * (idx)#*randoms[idx]
@@ -47,17 +48,24 @@ class Box
   constructor: (elem, idx) ->
     variation_x = 920
     variation_y = 500
-    @angle = Math.random()*360
-    #@angle = one_angle(idx)
-    @radius = Math.random()*350+50
-    @x = Math.sin(@angle)*@radius
-    @y = -Math.cos(@angle)*@radius
+    
+    #@angle = Math.random()*360
+    #@radius = Math.random()*350+50
+    @angle = idx * Math.PI / 6.0
+    @radius = 320
+    #@radius = Math.random()*350+50
+    
+    @x = Math.sin(@angle)*@radius* 1.3  - 63 
+    @y = -Math.cos(@angle)*@radius* 0.8 - 46
     #console.log "angle: "+@angle+" x:"+@x+" y:"+@y
     @elem = elem
     @idx = idx
-    @width = 100
-    @height = 100
-    @width = 60 if @idx == 0 # Me box is thinner
+    @width = 200
+    @height = 133
+    #@width = 60 if @idx == 0 # Me box is thinner
+    
+    #boxes << { x: @x, y: @y }
+    
   animate: ->
     $(@elem).css({ zIndex: @idx+2 })
 

@@ -48,16 +48,40 @@ h1 {
   height: 30px;
   margin-top: -30px;
   margin-left: -30px; }
+  #boxes .mini {
+    font-size: 0.8em; }
   #boxes div {
     position: absolute;
     background: #423aff;
     width: 30px;
     height: 30px;
     color: white;
-    padding: 5px;
+    padding: 0;
     cursor: pointer;
     opacity: 0;
     font-size: 0.9em; }
+    #boxes div span {
+      bottom: 0;
+      position: absolute;
+      background: black;
+      display: block;
+      width: 100%;
+      padding: 2px 5px; }
+
+a.email {
+  float: left;
+  font-size: 1.5em;
+  text-decoration: underline;
+  text-transform: normal; }
+
+.icon {
+  font-size: 0.9em;
+  float: right;
+  position: absolute;
+  bottom: 20px;
+  right: 2%; }
+  .icon img {
+    width: 30px; }
 
 img.large {
   width: 90%;
@@ -75,7 +99,7 @@ a {
   color: grey; }
 
 a:hover {
-  color: #423aff; }
+  color: black; }
 
 a.jqzoom {
   width: 500px; }
@@ -100,17 +124,11 @@ a.back {
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -webkit-transform-style: preserve-3d; }
 
-.icon {
-  font-size: 0.9em;
-  margin: 20px 0 0 0;
-  float: right; }
-  .icon img {
-    width: 30px;
-    position: relative;
-    top: 9px; }
+.scroll_top {
+  font-size: 2.3em; }
 
 img.large {
-  width: 49%;
+  width: 49.73%;
   display: inline-block; }
 
 img.double {
@@ -118,4 +136,7 @@ img.double {
 
 a.back {
   margin-bottom: 15px;
-  color: black; }
+  color: grey;
+  font-size: 2.1em; }
+  a.back:hover {
+    color: black; }

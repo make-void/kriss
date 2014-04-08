@@ -3,5 +3,8 @@
     %h1= "KRISTINA BUTKUTE"
 #boxes_wrap
   #boxes{ style: "display: none" }
-    - for dir in dirs
-      %div{ :"data-href" => "/pages/#{dir}" }= dir.capitalize.humanize
+    - dirs.each_with_index do |dir, idx|
+      %div{ :"data-href" => "/pages/#{dir}", style: "background: url('/images/_menu/#{dir}.jpg')", class: "#{"mini" if idx == 9}" }
+        %span= dir.capitalize.humanize 
+        
+        
