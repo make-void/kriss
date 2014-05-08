@@ -3,15 +3,15 @@
 %a.back{ href: "/" } <
 
 - for photo in photos(@page)
-  %a{ href: "/zoom2#{photo}" }
+  %a{ href: "/zoom2?image=#{photo}" }
     %img.large{ src: photo, class: "#{"double" if photo[-5] == "_"}" }
 
 - if @page == "_me"
   %a.email{ href: "mailto:kristina.butkute@gmail.com" }
     kristina.butkute@gmail.com
-  
+
   .icon
     open source
     %img{ src: "/icons/open_source.png" }
-    
+
 %a.scroll_top.right{ href: "#", onclick: "$('html,body').animate({ scrollTop: 0 })" } ^
