@@ -9,6 +9,8 @@ end
 
 # Kriss app
 
+set :root, PATH
+
 get '/' do
   haml :index
 end
