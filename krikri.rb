@@ -1,7 +1,4 @@
-path = File.expand_path "../", __FILE__
-PATH = path
-require "#{path}/config/env"
-require 'sinatra'
+require_relative "config/env"
 
 # monkeypatches
 class String
@@ -10,8 +7,7 @@ class String
   end
 end
 
-# require "#{path}/lib/moka"
-# include Moka
+# Kriss app
 
 get '/' do
   haml :index
@@ -37,7 +33,7 @@ get '/zoom2' do
   haml :zoom2
 end
 
-
+# ---
 
 helpers do
   def dirs_all
@@ -63,4 +59,3 @@ helpers do
     haml "elements/img_large".to_sym
   end
 end
-

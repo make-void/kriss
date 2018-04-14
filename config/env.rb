@@ -1,4 +1,4 @@
+path = File.expand_path "../", __FILE__
+PATH = path
 require 'bundler'
-require 'bundler/setup'
-
-require 'haml'
+Bundler.require :default
