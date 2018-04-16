@@ -4,3 +4,9 @@ task :run do
 end
 
 task default: :run
+
+
+desc "Build docker"
+task :docker_build do
+  sh `docker build -t kriss .`
+end

@@ -14,18 +14,15 @@ COPY config/index_catchall.html /home/app/default/404.html
 
 WORKDIR /home/app/
 
-  COPY tmp/pages/raudo/Gemfile tmp/pages/raudo/Gemfile.lock ./raudo/
+COPY Gemfile Gemfile.lock .
 
 USER root
 
-  WORKDIR /home/app/raudo/
-  RUN bundle --without development test --jobs 4
+RUN bundle --without development test --jobs 4
 
 USER app
 
-COPY tmp/pages /home/app/
-
-WORKDIR /home/app/
+COPY . /home/app/
 
 USER root
 
