@@ -2,6 +2,23 @@
 
 Architectural Portfolio's website (2010 version)
 
+### Prerequisites
+
+- ruby
+
+### Install
+
+    bundle
+
+### Run
+
+    rake
+
+An http server will serve the website (webapp) on localhost:9292, open your favourite browser and visit: http://localhost:9292
+
+
+
+
 ---
 
 ### Tech bits & pieces used:
